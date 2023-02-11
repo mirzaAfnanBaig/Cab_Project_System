@@ -164,14 +164,15 @@ public class HomePage extends JFrame implements ActionListener {
         else if (comnd.equals("Book Cab"))
         {
             JOptionPane.showMessageDialog(null,"clickable");
-//            new Book_Cab().setVisible(true);
-            Book_Cab b = new Book_Cab();
+            new Book_Cab().setVisible(true);
+            //Book_Cab b = new Book_Cab();
 //            new Book_Cab();
         }
-//        else if (comnd.equals("View Booked Cab"))
-//        {
-//            new View_BookedCab().setVisible(true);
-//        }else if (comnd.equals("Book Intercity Cab"))
+        else if (comnd.equals("View Booked Cab"))
+        {
+            new View_BookedCab();
+        }
+//        else if (comnd.equals("Book Intercity Cab"))
 //        {
 //            new Book_Intercity_Cab().setVisible(true);
 //        }else if (comnd.equals("View Intercity Booked Cab"))
