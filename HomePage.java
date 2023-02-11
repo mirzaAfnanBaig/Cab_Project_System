@@ -19,7 +19,7 @@ public class HomePage extends JFrame implements ActionListener {
 
 
 
-        ImageIcon ic=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/homepage1.jpg"));
+        ImageIcon ic=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/taxi2.jpg"));
         Image img=ic.getImage().getScaledInstance(1550,800,Image.SCALE_DEFAULT);
         ImageIcon ic1=new ImageIcon(img);
         l1=new JLabel(ic1);
@@ -161,10 +161,11 @@ public class HomePage extends JFrame implements ActionListener {
             new Update_Customer().setVisible(true);
         }
 //
-//        else if (comnd.equals("Book Cab"))
-//        {
-//            new Book_Cab().setVisible(true);
-//        }else if (comnd.equals("View Booked Cab"))
+        else if (comnd.equals("Book Cab"))
+        {
+            new Book_Cab().setVisible(true);
+        }
+//        else if (comnd.equals("View Booked Cab"))
 //        {
 //            new View_BookedCab().setVisible(true);
 //        }else if (comnd.equals("Book Intercity Cab"))

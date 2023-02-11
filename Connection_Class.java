@@ -18,9 +18,9 @@ public class Connection_Class {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //create a connection
-            String url="jdbc:mysql://localhost:330/cabproject";
+            String url="jdbc:mysql://localhost:3306/cabproject";
             String username="root";
-            String password="Sanan@321";
+            String password="AfnanBaig@123";
              con= DriverManager.getConnection(url,username,password);
 
             //create a statement

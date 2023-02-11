@@ -19,35 +19,35 @@ public  class Login extends JFrame implements ActionListener {
     Login()
     {
         f=new JFrame();
-        f.setBackground(Color.white);
+        f.setBackground(Color.cyan);
         f.setLayout(null);
 
         l1=new JLabel();
         l1.setBounds(0,0,580,350);
         l1.setLayout(null);
 
-        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/original.jpeg"));
-        Image i1=img.getImage().getScaledInstance(580,350,Image.SCALE_DEFAULT);
-        ImageIcon img1=new ImageIcon(i1);
-        l1.setIcon(img1);
+//        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/original.jpeg"));
+//        Image i1=img.getImage().getScaledInstance(580,350,Image.SCALE_DEFAULT);
+//        ImageIcon img1=new ImageIcon(i1);
+//        l1.setIcon(img1);
 
         l2=new JLabel("Login Account");
         l2.setBounds(190,30,500,50);
-        l2.setFont(new Font("Airal",Font.BOLD,30));
+        l2.setFont(new Font("Arial",Font.BOLD,30));
         l2.setForeground(Color.white);
         l1.add(l2);
         f.add(l1);
 
-        l3=new JLabel("Username : ");
+        l3=new JLabel("Username :");
         l3.setBounds(120,150,150,30);
         l3.setForeground(Color.WHITE);
-        l3.setFont(new Font("Airal",Font.BOLD,30));
+        l3.setFont(new Font("Arial",Font.BOLD,30));
         l1.add(l3);
 
 
-        l4=new JLabel("Password : ");
+        l4=new JLabel("Password :");
         l4.setBounds(120,170,150,30);
-        l4.setFont(new Font("Airal",Font.BOLD,30));
+        l4.setFont(new Font("Arial",Font.BOLD,30));
         l4.setForeground(Color.WHITE);
         l1.add(l4);
 
@@ -108,15 +108,17 @@ public  class Login extends JFrame implements ActionListener {
 
                 if (rs.next())
                 {
+                    JOptionPane.showMessageDialog(null,"yes it's showing");
                     new HomePage().setVisible(true);
+//                    new HomePage();
                     System.out.println("Login");
-                    f.setVisible(false);
+//                    f.setVisible(false);
                 }
                 else
                 {
                     JOptionPane.showMessageDialog(null,"you have Entered Wrong Username or Password");
-                    f.setVisible(false);
-                    f.setVisible(true);
+//                    f.setVisible(false);
+//                    f.setVisible(true);
                 }
 
 

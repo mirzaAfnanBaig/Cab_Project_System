@@ -64,12 +64,12 @@ public class SignUp extends JFrame implements ActionListener {
         p1.setBounds(150,120,150,30);
         f.add(p1);
 
-        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/2.jpeg"));
-        Image i2=i1.getImage().getScaledInstance(250,250,Image.SCALE_DEFAULT);
-        ImageIcon i3=new ImageIcon(i2);
-        JLabel l5=new JLabel(i3);
-        l5.setBounds(350,70,150,150);
-        f.add(l5);
+//        //ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/2.jpeg"));
+//        Image i2=i1.getImage().getScaledInstance(250,250,Image.SCALE_DEFAULT);
+//        ImageIcon i3=new ImageIcon(i2);
+//        JLabel l5=new JLabel(i3);
+//        l5.setBounds(350,70,150,150);
+//        f.add(l5);
 
         //craeting Button
 
@@ -110,7 +110,7 @@ public class SignUp extends JFrame implements ActionListener {
 
             try{
                 Connection_Class obj=new Connection_Class();
-                String q="insert into SignUp values('"+username+"', '"+name+"' ,'"+password+"', '"+phone+"')";
+                String q="insert into signup values('"+username+"', '"+name+"' ,'"+password+"', '"+phone+"')";
                 int aa=obj.stmt.executeUpdate(q);
                 if (aa==1){
                     JOptionPane.showMessageDialog(null,"Account Created Successfully");
