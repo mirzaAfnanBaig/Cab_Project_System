@@ -29,7 +29,7 @@ public class Book_Cab extends JFrame implements ActionListener {
 
         try {
             Connection_Class obj = new Connection_Class();
-            String q = "Select source from intracity_driver";
+            String q = "Select Source from intracity_driver";
             ResultSet rest = obj.stmt.executeQuery(q);
             while (rest.next()) {
                 ch1.add(rest.getString("Source")); // it will show option to collect information from Source attribute
@@ -88,7 +88,7 @@ public class Book_Cab extends JFrame implements ActionListener {
         bt1.addActionListener(this);
         bt2.addActionListener(this);
 
-        bt1.setBackground(Color.yellow);
+        bt1.setBackground(Color.YELLOW);
         bt2.setBackground(Color.RED);
 
         bt1.setForeground(Color.black);
@@ -96,7 +96,7 @@ public class Book_Cab extends JFrame implements ActionListener {
 
         Random rm = new Random();
         tf1.setText("" + Math.abs(rm.nextInt() % 100000));
-        tf1.setForeground(Color.red);
+        tf1.setForeground(Color.RED);
 
         l1.setFont(f);
         l2.setFont(f1);
@@ -115,6 +115,8 @@ public class Book_Cab extends JFrame implements ActionListener {
 
         tf1.setFont(f1);
         //tf2 is not mentioned here look for it
+
+
         tf3.setFont(f1);
         tf4.setFont(f1);
         tf5.setFont(f1);
@@ -141,6 +143,7 @@ public class Book_Cab extends JFrame implements ActionListener {
         p2.add(l5);
         p2.add(ch3);
         p2.add(l6);
+
         p2.add(tf3);
         p2.add(l7);
         p2.add(tf4);
@@ -152,13 +155,15 @@ public class Book_Cab extends JFrame implements ActionListener {
         p2.add(tf7);
         p2.add(l11);
         p2.add(tf8);
+
         p2.add(bt1);
         p2.add(bt2);
 
-        ImageIcon ic = new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/taxi2.jpg"));
-        Image img = ic.getImage().getScaledInstance(680, 500, Image.SCALE_DEFAULT);
+        ImageIcon ic = new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/taxi4.png"));
+        Image img = ic.getImage().getScaledInstance(700, 500, Image.SCALE_DEFAULT);
         ImageIcon ic1 = new ImageIcon(img);
-        l1 = new JLabel(ic1);
+        l12 = new JLabel(ic1);
+
 
         p3 = new JPanel();
         p3.setLayout(new GridLayout(1, 1, 10, 10));
@@ -167,7 +172,7 @@ public class Book_Cab extends JFrame implements ActionListener {
         setLayout(new BorderLayout(10, 10));
         add(p1, "North");
         add(p2, "Center");
-        add(p3, "west");
+        add(p3, "West");
 
         ch3.addMouseListener(new MouseAdapter() {
             @Override
@@ -176,12 +181,13 @@ public class Book_Cab extends JFrame implements ActionListener {
                 try {
                     Connection_Class obj = new Connection_Class();
                     String username = ch3.getSelectedItem();
-                    String q1 = "select name from customer where username = '" + username + "'";
+                    String q1 = "select Name from customerinfo where Username = '" + username + "'";
                     ResultSet rest1 = obj.stmt.executeQuery(q1);
                     while (rest1.next()) {
-                        tf3.setText(rest1.getString("name"));
+                        tf3.setText(rest1.getString("Name"));
                     }
                     rest1.close();
+
                 } catch (Exception ec) {
                     ec.printStackTrace();
                 }
@@ -197,10 +203,10 @@ public class Book_Cab extends JFrame implements ActionListener {
                 try {
                     Connection_Class obj = new Connection_Class();
                     String source = ch1.getSelectedItem();
-                    String q1 = "select destination from intracity_driver where source= '" + source + "'";
+                    String q1 = "select Destination from intracity_driver where Source= '" + source + "'";
                     ResultSet rest1 = obj.stmt.executeQuery(q1);
                     while (rest1.next()) {
-                        ch2.add(rest1.getString("destination"));
+                        ch2.add(rest1.getString("Destination"));
                     }
                 } catch (Exception er) {
                     er.printStackTrace();
@@ -215,7 +221,7 @@ public class Book_Cab extends JFrame implements ActionListener {
                     Connection_Class obj = new Connection_Class();
                     String source = ch1.getSelectedItem(); // selected source value will be store here
                     String destination = ch2.getSelectedItem(); // selected destination value will be store here
-                    String q1 = "select * from intracity_driver where source='" + source + "'and destination= '" + destination + "'";
+                    String q1 = "select * from intracity_driver where Source='" + source + "'and Destination= '" + destination + "'";
                     ResultSet rest1 = obj.stmt.executeQuery(q1);
                     while (rest1.next()) {
                         tf4.setText(rest1.getString("driver"));
@@ -243,7 +249,7 @@ if (e.getSource()== bt1){
 
     try {
         Connection_Class obj3 = new Connection_Class();
-        String q1 = "insert into intracitycab values('"+bid+"','"+username+"','"+dname+"','"+car+"','"+source+"','"+destination+"','"+price+"')";
+        String q1 = "insert into intracitycab(BookId,username,drivername,car,source,destination,price) values('"+bid+"','"+username+"','"+dname+"','"+car+"','"+source+"','"+destination+"','"+price+"')";
         int aa = obj3.stmt.executeUpdate(q1);
         if (aa == 1){
             JOptionPane.showMessageDialog(null,"Cab Booked Successfully");
@@ -262,6 +268,6 @@ if (e.getSource()== bt1){
 }
 
     public static void main(String[] args) {
-        new Book_Cab();
+        new Book_Cab().setVisible(true);
     }
 }

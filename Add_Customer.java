@@ -21,7 +21,7 @@ public class Add_Customer extends JFrame implements ActionListener {
        f.setBounds(0,0,900,600);
        f.setLayout(null);
 
-        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/original.jpeg"));
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/taxi.jpg"));
         Image i1=img.getImage().getScaledInstance(800,800,Image.SCALE_DEFAULT);
         ImageIcon img1=new ImageIcon(i1);
         id.setIcon(img1);
@@ -34,19 +34,19 @@ public class Add_Customer extends JFrame implements ActionListener {
         id1=new JLabel("Add Customer Details");
         id1.setBounds(280,30,550,50);
         id1.setForeground(Color.BLACK);
-        id1.setFont(new Font("Airal",Font.BOLD,30));
+        id1.setFont(new Font("Arial",Font.BOLD,30));
         id.add(id1);
         f.add(id1);
 
 
-        //Craeting username
+        //Creating username
         id2=new JLabel("Username");
         id2.setBounds(50,150,150,30);
         id2.setFont(new Font("Arial",Font.BOLD,20));
         id.add(id2);
         f.add(id2);
 
-        //creating textfield for username
+        //creating textField for username
         t1=new JTextField();
         t1.setBounds(200,150,150,30);
         f.add(t1);

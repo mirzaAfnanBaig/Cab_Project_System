@@ -15,18 +15,18 @@ public class HomePage extends JFrame implements ActionListener {
 
         super("Home Page");
         setLocation(0,0);
-        setSize(1550,1000);
+        setSize(1080,720);
 
 
 
         ImageIcon ic=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/taxi2.jpg"));
-        Image img=ic.getImage().getScaledInstance(1550,800,Image.SCALE_DEFAULT);
+        Image img=ic.getImage().getScaledInstance(1080,720,Image.SCALE_DEFAULT);
         ImageIcon ic1=new ImageIcon(img);
         l1=new JLabel(ic1);
 
         //creating Font
 
-        f1=new Font("Lucida Fax",Font.BOLD,20);
+        f1=new Font("Lucid Fax",Font.BOLD,20);
         f2=new Font("Gadugi",Font.BOLD,35);
         f3=new Font("MS UI Gothic",Font.BOLD,18);
 
@@ -36,7 +36,7 @@ public class HomePage extends JFrame implements ActionListener {
         JMenuBar bar=new JMenuBar();
 
         JMenu menu1=new JMenu("Cutomer Profile");
-        //Craeting menu item of Customer profile
+        //Creating menu item of Customer profile
         JMenuItem item1=new JMenuItem("Add Customer profile");
         JMenuItem item2=new JMenuItem("View Customer profile");
 
@@ -163,7 +163,10 @@ public class HomePage extends JFrame implements ActionListener {
 //
         else if (comnd.equals("Book Cab"))
         {
-            new Book_Cab().setVisible(true);
+            JOptionPane.showMessageDialog(null,"clickable");
+//            new Book_Cab().setVisible(true);
+            Book_Cab b = new Book_Cab();
+//            new Book_Cab();
         }
 //        else if (comnd.equals("View Booked Cab"))
 //        {

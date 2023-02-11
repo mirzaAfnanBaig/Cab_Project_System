@@ -19,17 +19,17 @@ public  class Login extends JFrame implements ActionListener {
     Login()
     {
         f=new JFrame();
-        f.setBackground(Color.cyan);
+        f.setBackground(Color.white);
         f.setLayout(null);
 
         l1=new JLabel();
         l1.setBounds(0,0,580,350);
         l1.setLayout(null);
 
-//        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/original.jpeg"));
-//        Image i1=img.getImage().getScaledInstance(580,350,Image.SCALE_DEFAULT);
-//        ImageIcon img1=new ImageIcon(i1);
-//        l1.setIcon(img1);
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/13240.png"));
+        Image i1=img.getImage().getScaledInstance(580,350,Image.SCALE_DEFAULT);
+        ImageIcon img1=new ImageIcon(i1);
+        l1.setIcon(img1);
 
         l2=new JLabel("Login Account");
         l2.setBounds(190,30,500,50);
@@ -38,15 +38,15 @@ public  class Login extends JFrame implements ActionListener {
         l1.add(l2);
         f.add(l1);
 
-        l3=new JLabel("Username :");
-        l3.setBounds(120,150,150,30);
+        l3=new JLabel("Username:");
+        l3.setBounds(100,110,200,30);  // made some changes in width make it 200 from 80 and changed x coordinate to 100
         l3.setForeground(Color.WHITE);
         l3.setFont(new Font("Arial",Font.BOLD,30));
         l1.add(l3);
 
 
-        l4=new JLabel("Password :");
-        l4.setBounds(120,170,150,30);
+        l4=new JLabel("Password:");
+        l4.setBounds(100,170,200,30); // made some changes in width make it 200 from 80 and changed x coordinate to 100
         l4.setFont(new Font("Arial",Font.BOLD,30));
         l4.setForeground(Color.WHITE);
         l1.add(l4);
@@ -66,7 +66,7 @@ public  class Login extends JFrame implements ActionListener {
         b1=new JButton("Login");
         b1.setBackground(Color.BLACK);
         b1.setForeground(Color.white);
-        b1.setBounds(120,220,150,40);
+        b1.setBounds(100,220,150,40);
 
         b2=new JButton("SignUp");
         b2.setBackground(Color.BLACK);
@@ -83,7 +83,8 @@ public  class Login extends JFrame implements ActionListener {
         f.setVisible(true);
         f.setSize(580,340);
         f.setLocation(300,100);
-        f.setResizable(false);  // we can't make page small and large
+//        f.setResizable(false);  // we can't make page small and large
+        f.setResizable(true); // sizable is true
 
 
 
