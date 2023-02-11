@@ -156,7 +156,7 @@ public class Book_Cab extends JFrame implements ActionListener {
         p2.add(bt2);
 
         ImageIcon ic = new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/taxi2.jpg"));
-        Image img = ic.getImage().getScaledInstance(1550, 800, Image.SCALE_DEFAULT);
+        Image img = ic.getImage().getScaledInstance(680, 500, Image.SCALE_DEFAULT);
         ImageIcon ic1 = new ImageIcon(img);
         l1 = new JLabel(ic1);
 
