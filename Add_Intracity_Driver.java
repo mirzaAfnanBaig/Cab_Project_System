@@ -29,7 +29,7 @@ public class Add_Intracity_Driver extends JFrame implements ActionListener{
 
         //creating Labels
         //Display area for short text.
-        //label doesn't react to input event.
+        //lable doesn't react to input event.
 
         l1=new JLabel("Add Intracity Driver");
         l2=new JLabel("Driver Name");

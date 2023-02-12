@@ -175,10 +175,12 @@ public class HomePage extends JFrame implements ActionListener {
 //        else if (comnd.equals("Book Intercity Cab"))
 //        {
 //            new Book_Intercity_Cab().setVisible(true);
-//        }else if (comnd.equals("View Intercity Booked Cab"))
-//        {
-//            new View_Intercity_Book_Cab().setVisible(true);
-//        }else if (comnd.equals("Book Package"))
+//        }
+        else if (comnd.equals("View Intercity Booked Cab"))
+        {
+            new View_Intercity_Book_Cab().setVisible(true);
+        }
+//        else if (comnd.equals("Book Package"))
 //        {
 //            new Book_Package().setVisible(true);
 //        }else if (comnd.equals("View Booked Package"))

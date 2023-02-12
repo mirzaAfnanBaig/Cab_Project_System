@@ -43,7 +43,7 @@ public class View_BookedCab extends JFrame {
     t1.setBackground(Color.BLACK);
     t1.setForeground(Color.WHITE);
 
-    JScrollPane js = new JScrollPane( ); // use to scroll the information table
+    JScrollPane js = new JScrollPane(t1); // use to scroll the information table
     add(js);
   }
 
