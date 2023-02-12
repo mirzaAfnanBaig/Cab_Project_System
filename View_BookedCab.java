@@ -1,7 +1,6 @@
 package CAB_BOOKING;
 
 import javax.swing.*;
-import javax.xml.transform.Result;
 import java.awt.*;
 import java.sql.ResultSet;
 
@@ -9,7 +8,7 @@ public class View_BookedCab extends JFrame {
   Font f;
   JTable t1;
   String x[] = {"Book ID","Username","Driver Name","Car","Source","Destination","Price"};
-  String y[][] = new String[20][10]; // 20 rows and 10 columns
+  String y[][] = new String[20][7]; // 20 column 7 rows
   int i = 0, j = 0;
   View_BookedCab(){
 

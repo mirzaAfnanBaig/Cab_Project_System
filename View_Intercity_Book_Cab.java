@@ -9,7 +9,7 @@ public class View_Intercity_Book_Cab extends Frame {
 
     Font f;
     JTable t1;
-    String[] x = {"Book Id", "Username", "Name", "Driver Name", "Source", "Destination", "Type", "Car", "Price"};
+    String[] x = {"Book Id", "Username", "Name", "Driver Name", "Source", "Destination", "Type", "Car", "Price"}; // Row of Table
     String[][] y = new String[20][9];
     int i = 0, j = 0;
 
@@ -18,13 +18,14 @@ public class View_Intercity_Book_Cab extends Frame {
         super("Interacity Cab ");
         setSize(1080, 720);
         setLocation(0, 10);
-        f = new Font("MS UI Gothic", Font.BOLD, 17);
+        f = new Font("MS UI Gothic", Font.BOLD, 17); // font type, size
         try {
-            Connection_Class obj = new Connection_Class();
+            Connection_Class obj = new Connection_Class(); // connection is created on class Connection_Class we just called it
             String q = "select * from intercitycab";//  table name is intercitycab
             ResultSet rest = obj.stmt.executeQuery(q);
 
             while (rest.next()) {
+                // Attributes of Table intercitycab
                 y[i][j++] = rest.getString("BookId");
                 y[i][j++] = rest.getString("UserName");
                 y[i][j++] = rest.getString("Name");
