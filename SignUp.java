@@ -4,20 +4,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.ImageIcon;
 
 public class SignUp extends JFrame implements ActionListener {
 
     JFrame f;
     JTextField t1,t2,t3;
-    JLabel l1,l2,l3,l4,l5;
+    JLabel l1,l2,l3,l4;
     JPasswordField p1;
     JButton b1,b2;
 
 
     public SignUp() {
 
-        //crreating frame
+        //creating frame
         //provides window on the screen
 
         f=new JFrame("Create Account");

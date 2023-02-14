@@ -198,10 +198,11 @@ public class HomePage extends JFrame implements ActionListener {
 //        else if (comnd.equals("About"))
 //        {
 //            new About().setVisible(true);
-//        }else if (comnd.equals("Exit"))
-//        {
-//            System.out.println(0);
 //        }
+        else if (comnd.equals("Exit"))
+        {
+            System.out.println(0);
+        }
 
         }
 
