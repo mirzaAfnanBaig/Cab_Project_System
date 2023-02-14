@@ -186,13 +186,16 @@ public class HomePage extends JFrame implements ActionListener {
 //        }else if (comnd.equals("View Booked Package"))
 //        {
 //            new View_Booked_Package().setVisible(true);
-//        }else if (comnd.equals("Check Bill"))
-//        {
-//            new Check_Bill().setVisible(true);
-//        }else if (comnd.equals("Delete Customer"))
-//        {
-//            new Delete_Customer().setVisible(true);
-//        }else if (comnd.equals("About"))
+//        }
+        else if (comnd.equals("Check Bill"))
+        {
+            new Check_Bill().setVisible(true);
+        }
+        else if (comnd.equals("Delete Customer"))
+        {
+            new Delete_Customer().setVisible(true);
+        }
+//        else if (comnd.equals("About"))
 //        {
 //            new About().setVisible(true);
 //        }else if (comnd.equals("Exit"))

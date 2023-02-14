@@ -7,8 +7,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.EventObject;
 
 
 public class Update_Customer extends JFrame implements ActionListener {
@@ -16,7 +14,7 @@ public class Update_Customer extends JFrame implements ActionListener {
     JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12;
     JButton b1, b2;
     JPanel p1, p2, p3;
-    JTextField t1, t2, t3, t4, t5, t6, t7, t8, t9, t10;
+    JTextField t1, t2, t3, t4, t5, t6, t7, t8, t9;
     Font f1, f2;
     Choice c1;
     JFrame f;
@@ -37,7 +35,7 @@ public class Update_Customer extends JFrame implements ActionListener {
         c1 = new Choice();
         try {
             Connection_Class obj = new Connection_Class();
-            String q = "select username from customerinfo";
+            String q = "select Username from customerinfo";
             ResultSet set = obj.stmt.executeQuery(q);
             while (set.next()) {
                 c1.add(set.getString("Username"));
@@ -48,6 +46,7 @@ public class Update_Customer extends JFrame implements ActionListener {
         //creating Labels
         l1 = new JLabel("Update Customer");
         l1.setHorizontalAlignment(JLabel.CENTER);
+
         l2 = new JLabel("Username");
         l3 = new JLabel("Name");
         l4 = new JLabel("Age");
@@ -59,7 +58,7 @@ public class Update_Customer extends JFrame implements ActionListener {
         l10 = new JLabel("Gender");
         l11 = new JLabel("Aadhar");
 
-        //creating textfield
+        //creating textField
         t1 = new JTextField();
         t2 = new JTextField();
         t3 = new JTextField();
@@ -109,8 +108,8 @@ public class Update_Customer extends JFrame implements ActionListener {
         c1.setFont(f2);
 
         //creating image
-        ImageIcon ic = new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/homepage1.jpg"));
-        Image img = ic.getImage().getScaledInstance(1550, 800, Image.SCALE_DEFAULT);
+        ImageIcon ic = new ImageIcon(ClassLoader.getSystemResource("CAB_BOOKING/image/taxi.jpg"));
+        Image img = ic.getImage().getScaledInstance(500, 500, Image.SCALE_DEFAULT);
         ImageIcon ic1 = new ImageIcon(img);
         l12 = new JLabel(ic1);
 
@@ -166,7 +165,7 @@ public class Update_Customer extends JFrame implements ActionListener {
                 try {
                     Connection_Class obj2 = new Connection_Class();
                     String Username = c1.getSelectedItem();
-                    String q1 = "select * from customerinfo where Username'" + Username + "'";
+                    String q1 = "select * from customerinfo where Username='" + Username + "'";
                     ResultSet set2 = obj2.stmt.executeQuery(q1);
                     while (set2.next()) {
                         t1.setText(set2.getString("Name"));
@@ -179,7 +178,7 @@ public class Update_Customer extends JFrame implements ActionListener {
                         t8.setText(set2.getString("Gender"));
                         t9.setText(set2.getString("Aadhar"));
                     }
-
+//                    set2.close();
                 } catch (Exception ee) {
                     ee.printStackTrace();
                 }
@@ -213,7 +212,7 @@ public class Update_Customer extends JFrame implements ActionListener {
                     this.setVisible(false);
                     System.out.println("Success");
                 } else {
-                    JOptionPane.showMessageDialog(null, "Please,Fill all Deatils Carefully");
+                    JOptionPane.showMessageDialog(null, "Please,Fill all Details Carefully");
 
                 }
             } catch (Exception ee) {

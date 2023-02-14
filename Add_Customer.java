@@ -221,15 +221,7 @@ public class Add_Customer extends JFrame implements ActionListener {
       }
       catch (Exception ee)
       {
-       ee.printStackTrace();
-      }
-
-
-
-
-
-
-
+       ee.printStackTrace();}
      }
      if(e.getSource()==b2)
      {
